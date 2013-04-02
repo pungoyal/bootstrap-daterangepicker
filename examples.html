@@ -80,7 +80,9 @@
                         dateLimit: false
                      }, 
                      function(start, end) {
-                        $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+                       if (start & end) {
+                         $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+                       }
                      }
                   );
 
